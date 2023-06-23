@@ -2,14 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: cert-app
-  namespace: cert-man
+  namespace: argocd
 spec:
   destination:
     namespace: cert-man
     server: https://kubernetes.default.svc
   project: default
   source:
-    chart: cert-manager
+    chart: argocd
     helm:
       parameters:
         - name: installCRDs
