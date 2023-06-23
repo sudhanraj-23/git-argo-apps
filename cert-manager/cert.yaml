@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    chart: argocd
+    chart: cert-manager
     helm:
       parameters:
         - name: installCRDs
