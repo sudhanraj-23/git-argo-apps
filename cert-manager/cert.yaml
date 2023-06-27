@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: cert-man
+    namespace: dev
     server: https://kubernetes.default.svc
   project: default
   source:
@@ -17,6 +17,8 @@ spec:
     repoURL: https://charts.jetstack.io
     targetRevision: v1.3.1
   syncPolicy:
-    automated: {}
+    automated:
+      prune: false
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
