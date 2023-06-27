@@ -20,5 +20,9 @@ spec:
   sources: []
   project: default
   syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+  syncPolicy:
     syncOptions:
       - CreateNamespace=true
