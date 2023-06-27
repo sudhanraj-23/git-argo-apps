@@ -17,7 +17,7 @@ spec:
         - name: replicaCount
           value: '3'
     repoURL: https://charts.jetstack.io
-    targetRevision: v1.3.1
+    targetRevision: v1.12.2
   syncPolicy:
     automated:
       prune: false
