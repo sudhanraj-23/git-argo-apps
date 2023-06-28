@@ -2,10 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: cert-app
-  namespace: argocd
+  namespace: argocd    # namespace where the argocd server is running
 spec:
   destination:
-    namespace: dev
+    namespace: dev    # namespace where the application should deploy
     server: https://kubernetes.default.svc
   project: default
   source:
