@@ -1,16 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hashicorp-vault
+  name: valult-app
   namespace: argocd
 spec:
   destination:
-    name: ''
-    namespace: qa
+    namespace: dev
     server: 'https://kubernetes.default.svc'
   source:
     path: .
     repoURL: 'https://github.com/hashicorp/vault-helm.git'
     targetRevision: HEAD
+    helm:
+      parameters:
+        - name: injector.replicas
+          value: '3'
   sources: []
   project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
