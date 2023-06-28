@@ -11,12 +11,12 @@ spec:
     path: .
     repoURL: 'https://github.com/hashicorp/vault-helm.git'
     targetRevision: HEAD
-    helm:
-      valueFiles:
-        - values.yaml
-      parameters:
-        - name: injector.replicas
-          value: '2'
+    # helm:
+    #   valueFiles:
+    #     - values.yaml
+    #   parameters:
+    #     - name: injector.replicas
+    #       value: '2'
   sources: []
   project: default
   syncPolicy:
