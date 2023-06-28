@@ -5,7 +5,7 @@ metadata:
   namespace: argocd   # namespace where the argocd server is running
 spec:
   destination:
-    namespace: dev     # namespace where the application should deploy
+    namespace: qa     # namespace where the application should deploy
     server: 'https://kubernetes.default.svc'
   source:
     path: .
