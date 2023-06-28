@@ -5,15 +5,12 @@ metadata:
   namespace: argocd
 spec:
   destination:
+    name: ''
     namespace: qa
     server: 'https://kubernetes.default.svc'
   source:
     path: .
     repoURL: 'https://github.com/hashicorp/vault-helm.git'
     targetRevision: HEAD
-    helm:
-      parameters:
-        - name: injector.replicas
-          value: '3'
   sources: []
   project: default
